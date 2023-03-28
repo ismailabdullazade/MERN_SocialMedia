@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { setPosts } from "state";
-import PostWidget from "./PostWidget"
+import PostWidget from "./PostWidget";
 
 const PostsWidget = ({ userId, isProfile = false }) => {
   const dispatch = useDispatch();
@@ -31,9 +31,9 @@ const PostsWidget = ({ userId, isProfile = false }) => {
 
   useEffect(() => {
     if (isProfile) {
-      getUserPosts()
+      getUserPosts();
     } else {
-      getPosts()
+      getPosts();
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
